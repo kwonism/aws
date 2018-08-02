@@ -16,7 +16,7 @@
 
         <!-- Categories Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Our Sidebar</h5>
+          <h5 class="card-header">Hot Post</h5>
           <div class="card-body">
             <div class="list-group">
               <a href="#" class="list-group-item list-group-item-action">First item</a>

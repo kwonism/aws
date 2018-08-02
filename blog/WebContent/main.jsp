@@ -1,7 +1,7 @@
-<%@page import="conn.cos.dao.MemberDAO"%>
+<%@page import="com.cos.dao.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
@@ -24,7 +24,7 @@
 
 <body>
 <!-- Nav include  -->
-<jsp:include page="include/navigation.jsp"/>
+<jsp:include page="/include/navigation.jsp"/>
 
   <!-- Page Content -->
   <div class="container">

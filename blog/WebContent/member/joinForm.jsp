@@ -1,7 +1,7 @@
-<%@page import="conn.cos.dao.MemberDAO"%>
+<%@page import="com.cos.dao.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
@@ -23,29 +23,6 @@
 </head>
 
 <body>
-<!-- Nav include  -->
-<jsp:include page="../include/navigation.jsp"/>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-steel fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Cos Blog</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <div class="navbar-nav">
-            <a class="nav-item active nav-link mr-auto" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-            <a class="nav-item nav-link" href="#">About</a>
-        </div>
-        <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Login</a>
-            <a class="nav-item nav-link" href="#">Register</a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
   <!-- Page Content -->
   <div class="container">
@@ -53,19 +30,44 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
       	<div class="content-section">
-      		<form method="POST" actionc="#">
+      		<form method="POST" action="<%=request.getContextPath()%>/member?cmd=member_join">
       			<fieldset class="form-group">
       			안녕!!<br>
       			<legend class="border-bottom mb-4">Join</legend>
+      			<div class="form-group">
       			<label class="form-control-label">ID</label>
       			<input class="form-control from-control-lg" type="text" name="id" maxlength="20" required autofocus>
       				</div>
+      				<div class="form-group">
+      			<label class="form-control-label">Password</label>
+      			<input class="form-control from-control-lg" type="text" name="password" maxlength="20" required>
+      				</div>
+      				<div class="form-group">
+      			<label class="form-control-label">Confirm_Password</label>
+      			<input class="form-control from-control-lg" type="text" name="confirm" maxlength="20" required>
+      				</div>
+      				<div class="form-group">
+      			<label class="form-control-label">Username</label>
+      			<input class="form-control from-control-lg" type="text" name="username" maxlength="20" required>
+      				</div>
+      				<div class="form-group">
+      			<label class="form-control-label">Email</label>
+      			<input class="form-control from-control-lg" type="text" name="email" maxlength="20" required>
+      				</div>
+      				<div class="border-top pt-3"></div>
+      				<small class="text-muted">
+      					Already Have An Acount? <a class="ml-2" href="<%=request.getContextPath() %>/member/loginForm.jsp"></a>
+      				</small>
+      				</div>
+      				<div class="form-group">
+      					<button class="btn btn-outline-info" type="submit">Sing in</button>
+      				</div>
       			</fieldset>
       	</form>
-      	</div>
-     
+      </div>
+     </div>
      <!--SidaBar Include  -->
-		<jsp:include page="../include/sidebar.jsp" />
+		<jsp:include page="/include/sidebar.jsp" />
     </div>
     <!-- /.row -->
 
